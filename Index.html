@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permite que la página se adapte a celular, tablet y PC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Barbería Corte Fino</title>
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header>
+
+        <!-- Logo pequeño del menú -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de Barbería Corte Fino">
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+            <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+            <a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a>
+            <a href="#" onclick="mostrarSeccion('servicios')">Servicios</a>
+            <a href="#" onclick="mostrarSeccion('productos')">Productos</a>
+            <a href="#" onclick="mostrarSoloContacto()">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio" class="inicio seccion activa">
+
+        <div class="inicio-contenedor">
+
+            <div class="inicio-contenido">
+
+                <h1>Barbería Corte Fino</h1>
+                 <p>
+                    Bienvenido a Corte Fino, un espacio creado para quienes buscan renovar
+                    su imagen con estilo, comodidad y atención profesional.
+                </p>
+
+                <p>
+                    Nos especializamos en cortes modernos, clásicos, degradados, perfilado
+                    de barba y asesoría personalizada para que cada cliente encuentre el look
+                    que mejor va con su personalidad.
+                </p>
+
+                <div class="portada">
+                    <img src="images/portada.png" alt="Portada Barbería Corte Fino">
+                </div>
+
+                <a href="#" class="boton" onclick="mostrarSoloContacto()">Reservar cita</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="nosotros seccion">
+
+        <h2>Nosotros</h2>
+
+        <p>
+            En Corte Fino creemos que un buen corte no solo mejora tu apariencia,
+            también aumenta tu seguridad.
+        </p>
+
+        <p>
+            Nuestro equipo trabaja con dedicación, limpieza y precisión para brindar
+            una experiencia diferente en cada visita. Nos enfocamos en ofrecer un
+            servicio de calidad en un ambiente moderno, cómodo y profesional.
+        </p>
+
+        <div class="imagen-nosotros">
+            <img src="images/nosotros.png" alt="Equipo de Barbería Corte Fino">
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="servicios seccion">
+
+        <h2>Nuestros Servicios</h2>
+
+        <p class="texto-servicios">
+            En Corte Fino ofrecemos servicios pensados para resaltar tu estilo y cuidar cada detalle de tu imagen.
+        </p>
+
+        <p class="texto-servicios">
+            Realizamos cortes clásicos, modernos, degradados, afeitados y perfilados de barba con atención personalizada,
+            utilizando técnicas profesionales para lograr un acabado limpio, fresco y elegante.
+        </p>
+
+        <div class="imagen-servicios">
+            <img src="images/servicios.png" alt="Servicios de Barbería Corte Fino">
+        </div>
+
+        <!-- Botón para mostrar y ocultar cortes -->
+        <button class="btn-agregar-producto" onclick="mostrarCortes()">
+            Ver cortes
+        </button>
+
+        <!-- CONTENEDOR DE TODOS LOS CORTES -->
+        <div id="lista-cortes" class="lista-cortes">
+
+            <!-- Corte 1 -->
+            <div class="cortes">
+                <h3>Corte clásico</h3>
+
+                <div class="clasico">
+                    <img src="images/clasico.png" alt="Corte clásico">
+                </div>
+
+                <p>
+                    Estilo elegante, limpio y tradicional, ideal para quienes buscan una
+                    apariencia ordenada y profesional. Es un corte versátil que se adapta
+                    a diferentes ocasiones, manteniendo una imagen sobria, fresca y fácil de peinar.
+                </p>
+
+                <p class="precio">S/ 15.00</p>
+            </div>
+
+            <!-- Corte 2 -->
+            <div class="cortes">
+                <h3>Degradado Bajo</h3>
+
+                <div class="degradado-bajo">
+                    <img src="images/degradado-bajo.png" alt="Degradado bajo">
+                </div>
+
+                <p>
+                    Corte con transición suave desde la parte baja de la cabeza, ideal para
+                    quienes buscan un estilo limpio, discreto y elegante.
+                </p>
+
+                <p class="precio">S/ 25.00</p>
+            </div>
+
+            <!-- Corte 3 -->
+            <div class="cortes">
+                <h3>Degradado Medio</h3>
+
+                <div class="degradado-medio">
+                    <img src="images/degradado-medio.png" alt="Degradado medio">
+                </div>
+
+                <p>
+                    Corte con transición a media altura, equilibrando lo clásico con lo moderno.
+                    Es una excelente opción para quienes quieren un look fresco, definido y versátil.
+                </p>
+
+                <p class="precio">S/ 25.00</p>
+            </div>
+
+            <!-- Corte 4 -->
+            <div class="cortes">
+                <h3>Degradado Alto</h3>
+
+                <div class="degradado-alto">
+                    <img src="images/degradado-alto.png" alt="Degradado alto">
+                </div>
+
+                <p>
+                    Corte con transición más marcada desde la parte alta de la cabeza, ideal
+                    para un estilo moderno, urbano y llamativo.
+                </p>
+
+                <p class="precio">S/ 25.00</p>
+            </div>
+
+            <!-- Corte 5 -->
+            <div class="cortes">
+                <h3>Taper Fade</h3>
+
+                <div class="taper-fade">
+                    <img src="images/taper-fade.png" alt="Taper fade">
+                </div>
+
+                <p>
+                    Un corte fino y moderno con transición sutil en los bordes, diseñado
+                    para lucir ordenado, fresco y con mucho estilo.
+                </p>
+
+                <p class="precio">S/ 30.00</p>
+            </div>
+
+            <!-- Corte 6 -->
+            <div class="cortes">
+                <h3>Skin Fade</h3>
+
+                <div class="skin-fade">
+                    <img src="images/skin-fade.png" alt="Skin fade">
+                </div>
+
+                <p>
+                    Degradado al ras de la piel, con una transición limpia y bien definida.
+                    Ideal para quienes buscan un estilo moderno, fresco y con acabado profesional.
+                </p>
+
+                <p class="precio">S/ 30.00</p>
+            </div>
+
+            <!-- Corte 7 -->
+            <div class="cortes">
+                <h3>Buzz Cut</h3>
+
+                <div class="buzz-cut">
+                    <img src="images/buzz-cut.png" alt="Buzz cut">
+                </div>
+
+                <p>
+                    Corte muy corto, práctico, fresco y fácil de mantener. Ideal para quienes
+                    buscan un estilo limpio, cómodo y moderno sin necesidad de mucho peinado.
+                </p>
+
+                <p class="precio">S/ 30.00</p>
+            </div>
+
+            <!-- Corte 8 -->
+            <div class="cortes">
+                <h3>Pompadour</h3>
+
+                <div class="pompadour">
+                    <img src="images/pompadour.png" alt="Pompadour">
+                </div>
+
+                <p>
+                    Corte con volumen hacia arriba y atrás, de estilo clásico y elegante.
+                    Ideal para quienes buscan una imagen sofisticada, pulida y con mucha presencia.
+                </p>
+
+                <p class="precio">S/ 30.00</p>
+            </div>
+
+            <!-- Corte 9 -->
+            <div class="cortes">
+                <h3>Comb Over</h3>
+
+                <div class="comb-over">
+                    <img src="images/comb-over.png" alt="Comb over">
+                </div>
+
+                <p>
+                    Peinado hacia un lado con acabado pulido y profesional. Ideal para quienes
+                    buscan un estilo elegante, ordenado y versátil para cualquier ocasión.
+                </p>
+
+                <p class="precio">S/ 25.00</p>
+            </div>
+
+            <!-- Corte 10 -->
+            <div class="cortes">
+                <h3>Crop Francés</h3>
+
+                <div class="crop-frances">
+                    <img src="images/crop-frances.png" alt="Crop francés">
+                </div>
+
+                <p>
+                    Corte corto con flequillo frontal, moderno y fácil de peinar. Ideal para
+                    quienes buscan un estilo fresco, ordenado y con personalidad.
+                </p>
+
+                <p class="precio">S/ 30.00</p>
+            </div>
+
+            <!-- Corte 11 -->
+            <div class="cortes">
+                <h3>Corte con Diseño</h3>
+
+                <div class="corte-diseno">
+                    <img src="images/corte-diseño.png" alt="Corte con diseño">
+                </div>
+
+                <p>
+                    Corte personalizado con líneas, figuras o detalles creativos que resaltan
+                    tu estilo. Ideal para quienes buscan un look moderno, diferente y con mucha personalidad.
+                </p>
+
+                <p class="precio">S/ 35.00</p>
+            </div>
+
+            <!-- Corte 12 -->
+            <div class="cortes">
+                <h3>Afeitado Clásico</h3>
+
+                <div class="afeitado-clasico">
+                    <img src="images/afeitado-clasico.png" alt="Afeitado clásico">
+                </div>
+
+                <p>
+                    Afeitado con navaja para un acabado limpio, fresco y tradicional.
+                    Ideal para quienes buscan una experiencia elegante, relajante y un resultado impecable.
+                </p>
+
+                <p class="precio">S/ 35.00</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN PRODUCTOS -->
+    <section id="productos" class="productos seccion">
+
+        <div class="productos-encabezado">
+
+            <div class="productos-info">
+                <h2>Productos</h2>
+
+                <p>
+                    En Corte Fino usamos productos de calidad para cuidar tu imagen
+                    y mantener tu estilo impecable. Trabajamos con artículos pensados
+                    para el cabello, la barba y el cuidado personal masculino.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="contenedor-productos">
+
+            <!-- Producto 1 -->
+            <div class="producto">
+                <h3>Cera para cabello</h3>
+
+                <img src="images/cera.png" alt="Cera para cabello">
+
+                <p>
+                    Producto ideal para dar forma, fijación y estilo al peinado.
+                    Permite mantener el cabello ordenado durante el día con un acabado
+                    natural y profesional.
+                </p>
+
+                <p class="precio">S/ 18.00</p>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto">
+                <h3>Aceite para barba</h3>
+
+                <img src="images/aceite.png" alt="Aceite para barba">
+
+                <p>
+                    Ayuda a hidratar, suavizar y dar brillo natural a la barba.
+                    También contribuye al cuidado de la piel debajo de la barba,
+                    evitando resequedad e incomodidad.
+                </p>
+
+                <p class="precio">S/ 20.00</p>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto">
+                <h3>Crema para afeitar</h3>
+
+                <img src="images/crema.png" alt="Crema para afeitar">
+
+                <p>
+                    Facilita el afeitado al suavizar la piel y permitir un mejor
+                    deslizamiento de la navaja. Ideal para lograr un acabado limpio,
+                    cómodo y sin irritaciones.
+                </p>
+
+                <p class="precio">S/ 20.00</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <!-- Contacto NO lleva la clase seccion porque siempre debe mostrarse abajo -->
+    <section id="contacto" class="contacto">
+
+        <h2>Contacto</h2>
+
+        <p class="contacto-intro">
+            Agenda tu cita y vive la experiencia Corte Fino. Estamos listos para ayudarte
+            a renovar tu estilo con atención profesional.
+        </p>
+
+        <button class="boton-reserva" onclick="mostrarFormulario()">
+            Reservar cita
+        </button>
+
+        <div id="formulario-reserva" class="formulario-reserva">
+
+            <h3>Reserva tu cita</h3>
+
+            <form>
+                <input type="text" placeholder="Nombre completo" required>
+
+                <input type="tel" placeholder="Número de celular" required>
+
+                <select required>
+                    <option value="">Selecciona un servicio</option>
+                    <option>Corte clásico</option>
+                    <option>Degradado bajo</option>
+                    <option>Degradado medio</option>
+                    <option>Degradado alto</option>
+                    <option>Taper Fade</option>
+                    <option>Skin Fade</option>
+                    <option>Buzz Cut</option>
+                    <option>Pompadour</option>
+                    <option>Comb Over</option>
+                    <option>Crop Francés</option>
+                    <option>Corte con Diseño</option>
+                    <option>Afeitado Clásico</option>
+                </select>
+
+                <input type="date" required>
+
+                <input type="time" required>
+
+                <textarea placeholder="Comentario adicional"></textarea>
+
+                <button type="submit" class="btn-enviar-reserva">
+                    Enviar reserva
+                </button>
+            </form>
+
+        </div>
+
+        <div class="contacto-contenedor">
+
+            <div class="contacto-card">
+                <h3>WhatsApp</h3>
+                <p>972017611</p>
+            </div>
+
+            <div class="contacto-card">
+                <h3>Dirección</h3>
+                <p>Av. Principal 123</p>
+            </div>
+
+            <div class="contacto-card">
+                <h3>Horario</h3>
+                <p>Lunes a sábado<br>9:00 a.m. a 8:00 p.m.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 - Barbería Corte Fino. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/51972017611" class="whatsapp-flotante" target="_blank">
+        WhatsApp
+    </a>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
